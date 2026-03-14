@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Email Analyzer — Black & Yellow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="hero">
+        <h1 class="title">Email Analyzer</h1>
+        <p class="subtitle">A small demo that runs the Python analyzer in your browser — beautiful black & yellow UI.</p>
+      </header>
+
+      <section class="card">
+        <label class="label">Enter email</label>
+        <div class="row">
+          <input id="emailInput" class="input" type="text" placeholder="name@example.com" aria-label="email input">
+          <button id="runBtn" type="button" class="btn btn-accent">Run</button>
+        </div>
+        <div class="status-row">
+          <span id="status" class="status">Loading Python Runtime</span>
+          <button id="copyBtn" type="button" class="btn btn-outline">Copy Result</button>
+        </div>
+
+        <label class="label">Output</label>
+        <pre id="output" class="output">(Results appear here)</pre>
+      </section>
+
+      <!-- original Python display removed per user request -->
+
+      <footer class="footer">© Copyright by sentakku</footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
