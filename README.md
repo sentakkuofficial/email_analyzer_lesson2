@@ -13,6 +13,10 @@ Files
 Live demo
 https://sentakkuofficial.github.io/email_analyzer_lesson2/
 
+Notes:
+Checkout the doc file to get notes for this class
+https://docs.google.com/document/u/1/d/e/2PACX-1vTWpUeCvHh8IkmEOunqOUfQ5yCoDCfqEmiYTPQKAHSEgEjj7-7V0TMqgGtJSUOCEPAtX6s-VoGLN-on/pub
+
 
 The main file of this project is email_analyzer.py
 
