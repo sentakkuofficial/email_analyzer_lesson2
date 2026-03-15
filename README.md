@@ -1,28 +1,20 @@
-# email_analyzer_lesson2
-This is code for project email_analyzer
+# email_analyzer_lesson2 — Lesson 2: Strings
 
-## Frontend demo
 
-A single-page frontend has been added to demonstrate the Python analyzer in the browser using Pyodide.
+What you'll learn
+- Split strings with `str.split()`
+- Access parts by index (username, domain)
+- Simple input validation and formatted output
 
-Files added:
+Files
+- `email_analyzer.py` — original script
+- `index.html`, `script.js`, `styles.css` — interactive web demo 
 
-- `index.html` — the single-page app with a black & yellow premium theme.
-- `styles.css` — styling for the page.
-- `script.js` — loads Pyodide and wires the UI to run the analyzer in-browser.
+Live demo
+https://sentakkuofficial.github.io/email_analyzer_lesson2/
 
-Run locally:
 
-1. From the project root, serve the directory (this is the simplest option):
+The main file of this project is email_analyzer.py
 
-```bash
-python3 -m http.server 8000
-# or for Python 2: python -m SimpleHTTPServer 8000
-```
+Feel free to tweak the analyzer and turn this into an exercise for learners.
 
-2. Open `http://localhost:8000` in your browser and click the page.
-
-Notes:
-- The page uses Pyodide (loaded from CDN) so Python runs entirely in the browser — no server is required to execute the analyzer.
-- The displayed Python source is the original script for reference; the site runs a safe in-browser wrapper function for the same logic.
-- To deploy, you can push these files to GitHub and enable GitHub Pages, or deploy the static site to Netlify/Vercel.
