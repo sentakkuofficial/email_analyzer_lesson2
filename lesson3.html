@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lesson 3 — Age Verifier (Black & Yellow)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="hero">
+        <h1 class="title">Lesson 3 — Age Verifier</h1>
+        <p class="subtitle">IMAX cinema age check demo — same black & yellow theme.</p>
+        <nav class="nav">
+          <a href="index.html" class="nav-link">Lesson 2: Email Analyzer</a>
+          <a href="lesson3.html" class="nav-link">Lesson 3: Age Verifier</a>
+        </nav>
+      </header>
+
+      <section class="card">
+        <label class="label">Name</label>
+        <input id="nameInput" class="input" type="text" placeholder="Your name">
+
+        <label class="label" style="margin-top:12px">Age</label>
+        <input id="ageInput" class="input" type="number" placeholder="Your age">
+
+        <div style="margin-top:12px; display:flex; gap:12px">
+          <button id="run3Btn" type="button" class="btn btn-accent">Check Age</button>
+          <button id="copy3Btn" type="button" class="btn btn-outline">Copy Result</button>
+        </div>
+
+        <div class="status-row" style="margin-top:12px">
+          <span id="status3" class="status">Loading Python runtime…</span>
+        </div>
+
+        <label class="label" style="margin-top:10px">Result</label>
+        <pre id="output3" class="output">(Result appears here)</pre>
+      </section>
+
+      <footer class="footer">© Copyright by sentakku</footer>
+    </main>
+
+    <script src="lesson3.js"></script>
+  </body>
+</html>
