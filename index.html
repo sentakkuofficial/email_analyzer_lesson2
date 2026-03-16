@@ -3,6 +3,63 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Python Beginner — Lessons 1 to 10</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="hero">
+        <h1 class="title">Python Beginner — Lessons 1 to 10</h1>
+        <p class="subtitle">Interactive Python lessons — pick a lesson to open its demo.</p>
+        
+      </header>
+
+      <section class="card">
+        <h2 class="code-title">All Lessons</h2>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:12px;">
+          <a href="lesson1.html" class="btn btn-outline" style="text-decoration:none;">Lesson 1</a>
+          <a href="lesson2.html" class="btn btn-outline" style="text-decoration:none;">Lesson 2</a>
+          <a href="lesson3.html" class="btn btn-outline" style="text-decoration:none;">Lesson 3</a>
+          <a href="lesson4.html" class="btn btn-outline" style="text-decoration:none;">Lesson 4</a>
+          <a href="lesson5.html" class="btn btn-outline" style="text-decoration:none;">Lesson 5</a>
+          <a href="lesson6.html" class="btn btn-outline" style="text-decoration:none;">Lesson 6</a>
+          <a href="lesson7.html" class="btn btn-outline" style="text-decoration:none;">Lesson 7</a>
+          <a href="lesson8.html" class="btn btn-outline" style="text-decoration:none;">Lesson 8</a>
+          <a href="lesson9.html" class="btn btn-outline" style="text-decoration:none;">Lesson 9</a>
+          <a href="lesson10.html" class="btn btn-outline" style="text-decoration:none;">Lesson 10</a>
+        </div>
+        <p class="muted" style="margin-top:12px">This Project Covers the first 10 lesson from Python Begineer Course.</p>
+      </section>
+
+      <footer class="footer">© Copyright by sentakku</footer>
+    </main>
+
+    <script>
+      // highlight active lesson link
+      (function(){
+        try{
+          const links = document.querySelectorAll('.nav-link');
+          const path = window.location.pathname.split('/').pop();
+          links.forEach(a=>{
+            const href = a.getAttribute('href').split('/').pop();
+            if(href === path || (path === '' && href === 'index.html')){
+              a.classList.add('active');
+              a.setAttribute('aria-current','page');
+            }
+          });
+        }catch(e){ console.error(e); }
+      })();
+    </script>
+  </body>
+</html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Email Analyzer — Black & Yellow</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,37 +68,24 @@
   
     <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
   </head>
-  <body>
-    <main class="wrap">
-      <header class="hero">
-        <h1 class="title">Email Analyzer</h1>
-        <p class="subtitle">A small demo that runs the Python analyzer in your browser — beautiful black & yellow UI.</p>
-        <nav class="nav">
-          <a href="index.html" class="nav-link">Lesson 2: Email Analyzer</a>
-          <a href="lesson3.html" class="nav-link">Lesson 3: Age Verifier</a>
-        </nav>
-      </header>
+  
+</html>
 
-      <section class="card">
-        <label class="label">Enter email</label>
-        <div class="row">
-          <input id="emailInput" class="input" type="text" placeholder="name@example.com" aria-label="email input">
-          <button id="runBtn" type="button" class="btn btn-accent">Run</button>
-        </div>
-        <div class="status-row">
-          <span id="status" class="status">Loading Python Runtime</span>
-          <button id="copyBtn" type="button" class="btn btn-outline">Copy Result</button>
-        </div>
-
-        <label class="label">Output</label>
-        <pre id="output" class="output">(Results appear here)</pre>
-      </section>
-
-      <!-- original Python display removed per user request -->
-
-      <footer class="footer">© Copyright by sentakku</footer>
-    </main>
-
-    <script src="script.js"></script>
+    <script>
+      // highlight active lesson link
+      (function(){
+        try{
+          const links = document.querySelectorAll('.nav-link');
+          const path = window.location.pathname.split('/').pop();
+          links.forEach(a=>{
+            const href = a.getAttribute('href').split('/').pop();
+            if(href === path || (path === '' && href === 'index.html')){
+              a.classList.add('active');
+              a.setAttribute('aria-current','page');
+            }
+          });
+        }catch(e){ console.error(e); }
+      })();
+    </script>
   </body>
 </html>

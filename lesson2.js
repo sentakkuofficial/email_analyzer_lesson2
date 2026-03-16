@@ -61,8 +61,27 @@ function copyOutput(){
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{
-  initPyodideAndCode();
-  document.getElementById('runBtn').addEventListener('click', runAnalysis);
-  document.getElementById('copyBtn').addEventListener('click', copyOutput);
-  document.getElementById('emailInput').addEventListener('keyup', (e)=>{ if(e.key === 'Enter') runAnalysis(); });
+  try{
+    console.debug('Lesson2 script loaded: initializing');
+    initPyodideAndCode();
+
+    const runBtn = document.getElementById('runBtn');
+    const copyBtn = document.getElementById('copyBtn');
+    const emailInput = document.getElementById('emailInput');
+
+    if(runBtn){
+      runBtn.addEventListener('click', (e)=>{ console.debug('Run clicked'); runAnalysis(); });
+    } else { console.warn('runBtn not found'); }
+
+    if(copyBtn){
+      copyBtn.addEventListener('click', (e)=>{ console.debug('Copy clicked'); copyOutput(); });
+    } else { console.warn('copyBtn not found'); }
+
+    if(emailInput){
+      emailInput.addEventListener('keyup', (e)=>{ if(e.key === 'Enter'){ console.debug('Enter pressed'); runAnalysis(); } });
+    } else { console.warn('emailInput not found'); }
+
+  }catch(err){
+    console.error('Error wiring Lesson2 UI:', err);
+  }
 });
